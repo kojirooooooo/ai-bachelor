@@ -1,0 +1,113 @@
+.ai-img {
+  width: 100%;
+  height: auto;
+}
+
+.ai-detail {
+  &__pc {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__sp {
+    margin-top: 2rem;
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  &__exp {
+    white-space: pre-wrap;
+  }
+}
+
+.img-profile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 1px #ccc;
+}
+
+.user-name {
+  margin: auto 0 auto 1em;
+}
+
+.profile-introduction {
+  white-space: pre-wrap;
+}
+
+.chat-list {
+  overflow-y: scroll;
+  max-height: 70vh;
+  width: auto;
+  @media screen and (max-width: 767px) {
+    max-height: 33.3vh;
+  }
+}
+
+.chat-left {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.chat-left .faceicon {
+  float: left;
+  margin-right: -50px;
+  width: 40px;
+}
+
+.chat-left .faceicon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.chat-left .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 50px;
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 12px;
+  background: #edf1ee;
+
+  p {
+    @media screen and (max-width: 767px) {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 14px;
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 19px solid #edf1ee;
+}
+
+.says-admin {
+  background: #dcdcdc;
+}
+.says-admin:after {
+  border-right: 19px solid #dcdcdc;
+}
+
+.says-ai {
+  background: #dda0dd;
+}
+.says-ai:after {
+  border-right: 19px solid #dda0dd;
+}
+
+.says p {
+  margin: 0;
+  padding: 0;
+}

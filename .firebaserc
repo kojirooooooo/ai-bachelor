@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "ai-bachelor-dev",
+    "production": "ai-bachelor-prod",
+    "developing": "ai-bachelor-dev"
+  },
+  "targets": {
+    "ai-bachelor-prod": {
+      "hosting": {
+        "ai-bachelor-prod": [
+          "ai-bachelor-prod"
+        ]
+      }
+    },
+    "ai-bachelor-dev": {
+      "hosting": {
+        "ai-bachelor-dev": [
+          "ai-bachelor-dev"
+        ]
+      }
+    }
+  }
+}

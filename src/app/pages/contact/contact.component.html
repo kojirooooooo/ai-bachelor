@@ -1,0 +1,68 @@
+<!-- <h1 class="mb-3 h2">お問い合わせ</h1>
+
+<form class="mb-3" (submit)="sendMail()" #f="ngForm">
+  <div class="mb-3">
+    <label for="InputDisplayName" class="form-label">お名前</label>
+    <input type="text" [(ngModel)]="mailSend.displayName" name="displayName" class="form-control" id="InputDisplayName"
+      required>
+    <div id="displayNameHelp" class="form-text">サイトに登録されている方は、ユーザー名を入力してください</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="InputEmail1" class="form-label">メールアドレス</label>
+    <input type="email" [(ngModel)]="mailSend.email" name="email" class="form-control" id="InputEmail1"
+      aria-describedby="emailHelp" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="InputSubject" class="form-label">件名</label>
+    <input type="text" [(ngModel)]="mailSend.subject" name="subject" class="form-control" id="InputSubject" required>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="content">お問い合わせ内容</label>
+    <textarea [(ngModel)]="mailSend.content" class="form-control" required id="content" name="content"
+      rows="8"></textarea>
+  </div>
+
+  <p>
+    <small>※確認画面はありません。入力内容をご確認のうえ、「送信する」ボタンを押して問い合わせを送信してください。</small>
+  </p>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!f.form.valid || loading">送信する</button>
+
+</form> -->
+
+<h1 class="mb-3 h2">お問い合わせ</h1>
+
+<form class="mb-3">
+  <div class="mb-3">
+    <label for="InputDisplayName" class="form-label">お名前</label>
+    <input type="text" name="displayName" class="form-control" id="InputDisplayName" required>
+    <div id="displayNameHelp" class="form-text">サイトに登録されている方は、ユーザー名を入力してください</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="InputEmail1" class="form-label">メールアドレス</label>
+    <input type="email" name="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="InputSubject" class="form-label">件名</label>
+    <input type="text" name="subject" class="form-control" id="InputSubject" required>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="content">お問い合わせ内容</label>
+    <textarea class="form-control" required id="content" name="content" rows="8"></textarea>
+  </div>
+
+  <p>
+    <small>※確認画面はありません。入力内容をご確認のうえ、「送信する」ボタンを押して問い合わせを送信してください。</small>
+  </p>
+
+  <button type="submit" class="btn btn-primary">送信する</button>
+
+</form>

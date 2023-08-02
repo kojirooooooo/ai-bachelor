@@ -1,0 +1,158 @@
+<!-- <h1 class="mb-3 h2">マイページ</h1>
+
+<div class="d-flex justify-content-start">
+  <figure>
+    <img class="img-profile" *ngIf="user.photoPath !== ''" src="{{user.photoPath}}" alt="プロフィール画像">
+    <div *ngIf="user.photoPath === ''">
+      <img src="../../../assets/img/no-image-icon.jpeg" class="img-profile" alt="ユーザーアバター">
+      <figcaption><small>プロフィール画像未登録</small></figcaption>
+    </div>
+  </figure>
+  <div class="user-name">
+    <h2 *ngIf="user.displayName !== ''" class="h5">{{user.displayName}}</h2>
+    <h2 *ngIf="user.displayName === ''" class="h5">ユーザー名未登録</h2>
+    <p *ngIf="user.introduction !== ''" class="profile-introduction">{{user.introduction}}</p>
+  </div>
+</div>
+
+<div class="mb-5">
+  <h2 class="h5 fw-bold">メールアドレス</h2>
+  <p>{{user.email}}</p>
+</div>
+
+<div class="mb-5">
+  <h2 class="h5 fw-bold">会員の種類</h2>
+  <p *ngIf="user.memberStatus === 'specialMember'">特別会員</p>
+  <p *ngIf="user.memberStatus === 'regularMember'">正会員</p>
+  <p *ngIf="user.memberStatus === 'generalMember'">一般会員</p>
+  <p *ngIf="user.memberStatus === 'associateMember'">準会員</p>
+  <p *ngIf="user.memberStatus === 'supportingMember'">賛助会員</p>
+  <p *ngIf="user.memberStatus === '' || !user.memberStatus"> -- </p>
+</div>
+
+<div class="mb-5">
+  <h2 class="h5 fw-bold">ユーザーステータス</h2>
+  <p *ngIf="user.userStatus === 'childUser'">スタッフ</p>
+  <p *ngIf="user.userStatus === 'parentUser'">オーナー</p>
+  <p *ngIf="user.userStatus === 'adminUser'">管理者</p>
+</div>
+
+<div *ngIf="user.userStatus === 'childUser'" class="mb-5">
+  <h2 class="h5 fw-bold">招待オーナーユーザー名</h2>
+  <p>{{parentUser.displayName}}</p>
+</div>
+
+<div *ngIf="user.userStatus === 'parentUser'" class="mb-5">
+  <h2 class="h5 fw-bold">招待ID</h2>
+  <p>{{user.invitationId}}</p>
+  <button (click)="copyMasterId()" class="btn btm-sm btn-primary" id="copy-button">IDをコピー</button>
+</div>
+
+<section>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>プロフィール修正:</dt>
+      <dd><a routerLink="./profile" class="btn btn-sm btn-outline-secondary">修正</a></dd>
+    </dl>
+  </article>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>メールアドレス変更:</dt>
+      <dd><a routerLink="./email-modified" class="btn btn-sm btn-outline-secondary">変更</a></dd>
+    </dl>
+  </article>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>パスワード変更:</dt>
+      <dd><a routerLink="./password-reset" class="btn btn-sm btn-outline-secondary">変更</a></dd>
+    </dl>
+  </article>
+
+  <div *ngIf="user$ | async as user;">
+    <article *ngIf="user.userStatus !== 'childUser'">
+      <dl class="d-flex justify-content-between border-bottom">
+        <dt>登録済みスタッフリスト:</dt>
+        <dd><a routerLink="./users-list" class="btn btn-sm btn-outline-secondary">詳細</a></dd>
+      </dl>
+    </article>
+  </div>
+
+
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>退会する:</dt>
+      <dd><a routerLink="./withdrawal" class="btn btn-sm btn-outline-secondary">退会ページ</a></dd>
+    </dl>
+  </article>
+
+</section> -->
+
+<h1 class="mb-3 h2">マイページ</h1>
+
+<div class="d-flex justify-content-start">
+  <figure>
+    <div>
+      <img src="../../../assets/img/no-image-icon.jpeg" class="img-profile" alt="ユーザーアバター">
+      <!-- <figcaption><small>プロフィール画像未登録</small></figcaption> -->
+    </div>
+  </figure>
+  <div class="user-name">
+    <h2 class="h5">テスト三郎</h2>
+    <p class="profile-introduction">テキストテキストテキストテキストテキスト</p>
+  </div>
+</div>
+
+<div class="mb-5">
+  <h2 class="h5 fw-bold">メールアドレス</h2>
+  <p>123@gmail.com</p>
+</div>
+
+<div class="mb-5">
+  <h2 class="h5 fw-bold">会員の種類</h2>
+  <p>一般会員</p>
+</div>
+
+<section>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>プロフィール修正:</dt>
+      <dd><a routerLink="./profile" class="btn btn-sm btn-outline-secondary">修正</a></dd>
+    </dl>
+  </article>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>メールアドレス変更:</dt>
+      <dd><a routerLink="./email-modified" class="btn btn-sm btn-outline-secondary">変更</a></dd>
+    </dl>
+  </article>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>パスワード変更:</dt>
+      <dd><a routerLink="./password-reset" class="btn btn-sm btn-outline-secondary">変更</a></dd>
+    </dl>
+  </article>
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>参加中ゲーム部屋リスト:</dt>
+      <dd><a routerLink="./chat-room-lists" class="btn btn-sm btn-outline-secondary">確認</a></dd>
+    </dl>
+  </article>
+
+
+
+  <article>
+    <dl class="d-flex justify-content-between border-bottom">
+      <dt>退会する:</dt>
+      <dd><a routerLink="./withdrawal" class="btn btn-sm btn-outline-secondary">退会ページ</a></dd>
+    </dl>
+  </article>
+
+</section>

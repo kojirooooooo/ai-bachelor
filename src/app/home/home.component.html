@@ -1,0 +1,201 @@
+<div class="row mb-1">
+  <div class="col-md-4 col-12">
+    <figure class="title-img">
+      <img src="../../assets/img/logo-hon.jpeg" alt="">
+    </figure>
+  </div>
+  <div class="col-md-8 col-12 mt-md-5 mt-1">
+    <h1 class="h3">AIバチェラー</h1>
+    <h2 class="h6 mb-4">サブタイトル</h2>
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    <p>
+      <small>
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </small>
+    </p>
+  </div>
+</div>
+
+<div class="row my-3">
+  <div class="col-md-6 col-12 mt-md-0 mt-5 order-md-first order-last">
+    <h2 class="h4">サイトからのお知らせ</h2>
+
+    <!-- <article *ngFor="let article of articlesList" class="card mb-4">-->
+    <article class="card mb-4">
+      <div class="row">
+        <div class="col-md-4">
+          <a routerLink="/article/detail/1">
+            <!-- <img *ngIf="article.thumbnailPath !== ''" class="articleThumbnail" [src]="article.thumbnailPath" alt="...">
+            <img *ngIf="article.thumbnailPath === ''" class="articleThumbnail"
+              src="../../../assets/img/now-printing.png" alt="..."> -->
+            <img class="articleThumbnail" src="../../../assets/img/now-printing.png" alt="...">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-8 col-sm-7 col-12">
+                <h5 class="card-title fw-bold">タイトル</h5>
+              </div>
+              <div class="col-xl-4 col-sm-5 col-12">
+                <p class="article-category">
+                  カテゴリー
+                </p>
+              </div>
+            </div>
+            <p class="card-text">
+              テキストテキストテキストテキストテキスト<a routerLink="/article/detail/1">...続きを読む</a>
+            </p>
+            <p class="card-text"><small class="text-muted"><time>2023-07-21</time></small></p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="card mb-4">
+      <div class="row">
+        <div class="col-md-4">
+          <a routerLink="/article/detail/1">
+            <!-- <img *ngIf="article.thumbnailPath !== ''" class="articleThumbnail" [src]="article.thumbnailPath" alt="...">
+                <img *ngIf="article.thumbnailPath === ''" class="articleThumbnail"
+                  src="../../../assets/img/now-printing.png" alt="..."> -->
+            <img class="articleThumbnail" src="../../../assets/img/now-printing.png" alt="...">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-8 col-sm-7 col-12">
+                <h5 class="card-title fw-bold">タイトル</h5>
+              </div>
+              <div class="col-xl-4 col-sm-5 col-12">
+                <p class="article-category">
+                  カテゴリー
+                </p>
+              </div>
+            </div>
+            <p class="card-text">
+              テキストテキストテキストテキストテキスト<a routerLink="/article/detail/1">...続きを読む</a>
+            </p>
+            <p class="card-text"><small class="text-muted"><time>2023-07-21</time></small></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card mb-4">
+      <div class="row">
+        <div class="col-md-4">
+          <a routerLink="/article/detail/1">
+            <!-- <img *ngIf="article.thumbnailPath !== ''" class="articleThumbnail" [src]="article.thumbnailPath" alt="...">
+                <img *ngIf="article.thumbnailPath === ''" class="articleThumbnail"
+                  src="../../../assets/img/now-printing.png" alt="..."> -->
+            <img class="articleThumbnail" src="../../../assets/img/now-printing.png" alt="...">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-8 col-sm-7 col-12">
+                <h5 class="card-title fw-bold">タイトル</h5>
+              </div>
+              <div class="col-xl-4 col-sm-5 col-12">
+                <p class="article-category">
+                  カテゴリー
+                </p>
+              </div>
+            </div>
+            <p class="card-text">
+              テキストテキストテキストテキストテキスト<a routerLink="/article/detail/1">...続きを読む</a>
+            </p>
+            <p class="card-text"><small class="text-muted"><time>2023-07-21</time></small></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- <p *ngIf="articlesLength === 0">記事が見つかりません</p> -->
+
+    <!-- <p *ngIf="articlesLength  >= 10" class="text-end mt-2"> -->
+    <p class="text-end mt-2">
+      <a routerLink="/article/list/1">>>記事一覧</a>
+    </p>
+
+  </div>
+
+  <div class="col-md-6 col-12 order-md-last order-first mb-md-0 mb-5">
+    <h2 class="h4">バチェロレッテ一覧</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <!-- <div class="col-6" *ngFor="let lives of livesList"> -->
+      <div class="col-6">
+        <div class="card card-live">
+          <!-- <img src="{{lives.thumbnailPath}}" class="card-img-top" alt="..."> -->
+          <img src="../../assets/img/ai1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title h6">
+              <!-- <a routerLink="/chat-game/detail/{{lives.id}}" class="stretched-link">{{lives.title}}</a> -->
+              <a routerLink="/chat-game/detail/1" class="stretched-link">中島 みくり</a>
+            </h3>
+            <p class="text-muted">カテゴリー: <br>ギャル</p>
+            <p class="text-muted">残席: 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card card-live">
+          <!-- <img src="{{lives.thumbnailPath}}" class="card-img-top" alt="..."> -->
+          <img src="../../assets/img/ai2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title h6">
+              <!-- <a routerLink="/chat-game/detail/{{lives.id}}" class="stretched-link">{{lives.title}}</a> -->
+              <a routerLink="/chat-game/detail/1" class="stretched-link">山本 絵里那</a>
+            </h3>
+            <p class="text-muted">カテゴリー: <br>お嬢様</p>
+            <p class="text-muted">残席: 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card card-live">
+          <!-- <img src="{{lives.thumbnailPath}}" class="card-img-top" alt="..."> -->
+          <img src="../../assets/img/ai3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title h6">
+              <!-- <a routerLink="/chat-game/detail/{{lives.id}}" class="stretched-link">{{lives.title}}</a> -->
+              <a routerLink="/chat-game/detail/1" class="stretched-link">菊地 佐由理</a>
+            </h3>
+            <p class="text-muted">カテゴリー: <br>ヤンデレ</p>
+            <p class="text-muted">残席: 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card card-live">
+          <!-- <img src="{{lives.thumbnailPath}}" class="card-img-top" alt="..."> -->
+          <img src="../../assets/img/ai4.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title h6">
+              <!-- <a routerLink="/chat-game/detail/{{lives.id}}" class="stretched-link">{{lives.title}}</a> -->
+              <a routerLink="/chat-game/detail/1" class="stretched-link">仲道 まど佳</a>
+            </h3>
+            <p class="text-muted">カテゴリー: <br>アイドル</p>
+            <p class="text-muted">残席: 3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <p *ngIf="livesLength === 0">講座が見つかりません</p> -->
+    </div>
+
+
+    <!-- <p *ngIf="livesLength  >= 12" class="text-end">
+    <a routerLink="/live/list/1">>>講座一覧</a>
+  </p> -->
+
+    <p class="text-end mt-2">
+      <a routerLink="/chat-game/list/1">>>もっと探す</a>
+    </p>
+  </div>
