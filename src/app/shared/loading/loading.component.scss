@@ -1,0 +1,25 @@
+:host {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  /* 背景をぼかす */
+  backdrop-filter: saturate(25%) blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
+
+  /* コンポーネントを上下左右中心に配置する */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}

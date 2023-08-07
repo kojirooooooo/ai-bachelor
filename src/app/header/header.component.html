@@ -17,13 +17,28 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/pages/contact">お問い合わせ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/auth/sign-up">新規会員登録</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/auth/sign-in">ログイン</a>
-        </li>
+        <div *ngIf="user$ | async as user">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/mypage">マイページ</a>
+          </li>
+        </div>
+
+        <div *ngIf="user$ | async as user; else loginBlock">
+          <li class="nav-item">
+            <a class="nav-link logOut-button" (click)="logOut()">ログアウト</a>
+          </li>
+        </div>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
+
+
+<ng-template #loginBlock>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/auth/sign-up">新規会員登録</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/auth/sign-in">ログイン</a>
+  </li>
+</ng-template>

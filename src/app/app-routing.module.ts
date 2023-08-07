@@ -8,8 +8,8 @@ import {
   redirectLoggedInTo,
 } from '@angular/fire/compat/auth-guard';
 
-// const redirectUnauthorized = () => redirectUnauthorizedTo(['auth/sign-in']);
-// const redirectLoggedIn = () => redirectLoggedInTo(['/']);
+const redirectUnauthorized = () => redirectUnauthorizedTo(['auth/sign-in']);
+const redirectLoggedIn = () => redirectLoggedInTo(['/']);
 
 const routes: Routes = [
   {
@@ -20,8 +20,8 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-    // canActivate: [AngularFireAuthGuard],
-    // data: { authGuardPipe: redirectLoggedIn },
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectLoggedIn },
   },
   {
     path: 'pages',
@@ -32,15 +32,15 @@ const routes: Routes = [
     path: 'mypage',
     loadChildren: () =>
       import('./mypage/mypage.module').then((m) => m.MypageModule),
-    // canActivate: [AngularFireAuthGuard],
-    // data: { authGuardPipe: redirectUnauthorized },
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorized },
   },
   {
     path: 'chat-game',
     loadChildren: () =>
       import('./chat-game/chat-game.module').then((m) => m.ChatGameModule),
-    // canActivate: [AngularFireAuthGuard],
-    // data: { authGuardPipe: redirectUnauthorized },
+    canActivate: [AngularFireAuthGuard],
+    data: { authGuardPipe: redirectUnauthorized },
   },
 ];
 
