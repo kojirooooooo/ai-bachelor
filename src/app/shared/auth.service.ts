@@ -47,13 +47,14 @@ export class AuthService {
         .then(async () => {
           await this.usersFirestore.getUserId().then((uid) => {
             if (uid) {
-              this.router.navigate(['/']);
-              this.snackBar.open('会員登録を行いました。', '', {
-                duration: 3500,
-              });
               userDoc.userId = uid;
               const callable = this.fns.httpsCallable('createUser');
-              lastValueFrom(callable(userDoc));
+              lastValueFrom(callable(userDoc)).then(() => {
+                this.router.navigate(['/']);
+                this.snackBar.open('会員登録を行いました。', '', {
+                  duration: 3500,
+                });
+              });
             }
             this.loadingService.hide();
           });

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from 'src/app/shared/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-password-reset',
@@ -13,7 +14,8 @@ export class PasswordResetComponent {
 
   constructor(
     private snackBar: MatSnackBar,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   async resetPassWordSend() {
@@ -35,7 +37,10 @@ export class PasswordResetComponent {
             duration: 3000,
           });
         })
-        .finally(() => (this.loading = false));
+        .finally(() => {
+          this.loading = false;
+          this.router.navigate(['/']);
+        });
     }
   }
 }

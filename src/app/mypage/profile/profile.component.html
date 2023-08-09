@@ -1,1 +1,41 @@
-<p>profile works!</p>
+<h1 class="mb-3 h2">プロフィール修正</h1>
+
+<form class="mb-3" #f="ngForm" (submit)="updateProfile()">
+  <div class="mb-3">
+    <label for="InputDisplayName" class="form-label">ユーザー名</label>
+    <input type="text" [(ngModel)]="user.displayName" name="displayName" class="form-control" id="InputDisplayName"
+      minlength="2" maxlength="40">
+    <div id="displayNameHelp" class="form-text">2文字以上40文字以下</div>
+  </div>
+
+  <div *ngIf="user.photoPath" class="mb-3">
+    <figure>
+      <img class="current-img" [src]="user.photoPath" alt="現在のプロフィール画像">
+      <figcaption>
+        <small>現在のプロフィール画像</small>
+      </figcaption>
+    </figure>
+  </div>
+
+  <p class="fw-bold" *ngIf="user.photoPath === ''">
+    プロフィール画像未登録
+  </p>
+
+  <div class="mb-3">
+    <label for="photo">プロフィール画像</label>
+    <input accept="image/*" type="file" id="photo" (change)="fileChangeEvent($event)" />
+    <image-cropper class="image-cropper" [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
+      [aspectRatio]="1 / 1" [resizeToWidth]="500" output="base64" format="png" (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()">
+    </image-cropper>
+
+    <!--<img [src]="croppedImage" /><br>-->
+  </div>
+  <div class="mb-3">
+    <label for="introduction">自己紹介文</label>
+    <textarea class="form-control" required [(ngModel)]="user.introduction" id="introduction" name="introduction"
+      rows="8"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!f.form.valid || loading">修正する</button>
+  <a routerLink="../" class="ms-3 btn btn-secondary">戻る</a>
+</form>

@@ -1,0 +1,13 @@
+.current-img {
+  max-width: 500px;
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.image-cropper {
+  max-width: 500px;
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
