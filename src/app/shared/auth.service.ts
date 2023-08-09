@@ -63,25 +63,32 @@ export class AuthService {
   }
 
   async authSignin(login: { email: string; password: string }) {
-    try {
-      this.loadingService.show().then(async () => {
+    this.loadingService.show().then(async () => {
+      try {
         await this.afAuth
           .signInWithEmailAndPassword(login.email, login.password)
           .then(() => {
-            this.loadingService.show().then(() => {
-              this.router.navigate(['/']);
-              this.snackBar.open('ログインしました', '', {
-                duration: 2500,
-              });
-              this.loadingService.hide();
-              return;
+            this.router.navigate(['/']);
+            this.snackBar.open('ログインしました', '', {
+              duration: 2500,
             });
+            this.loadingService.hide();
+            return;
           });
-      });
-    } catch (error) {
-      this.alertError(error);
-      throw error;
-    }
+      } catch (error) {
+        this.router.navigate(['/']);
+        this.snackBar.open(
+          'ログインに失敗しました。ログイン情報を確認してください。',
+          '',
+          {
+            duration: 3500,
+          }
+        );
+        this.alertError(error);
+        throw error;
+      }
+    });
+    this.loadingService.hide();
   }
 
   async authSignOut() {

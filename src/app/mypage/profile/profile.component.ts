@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -35,8 +34,7 @@ export class ProfileComponent implements OnInit {
     private imagesFirestorage: ImagesFirestorageService,
     private loadingService: LoadingService,
     private router: Router,
-    private snackBar: MatSnackBar,
-    private sanitizer: DomSanitizer
+    private snackBar: MatSnackBar
   ) {}
 
   async ngOnInit() {
